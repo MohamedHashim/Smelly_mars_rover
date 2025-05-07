@@ -48,22 +48,6 @@ export class Rover {
     this.roverState.direction =this.Transition[direction].left;
   }
 
-  private isEast() {
-    return this.roverState.direction === Direction.East;
-  }
-
-  private isNorth() {
-    return this.roverState.direction === Direction.North;
-  }
-
-  private isSouth() {
-    return this.roverState.direction === Direction.South;
-  }
-
-  private isWest() {
-    return this.roverState.direction === Direction.West;
-  }
-
   public getPosition(): string {
     return `${this.roverState.position_x} ${this.roverState.position_y} ${this.roverState.direction}`;
   }
