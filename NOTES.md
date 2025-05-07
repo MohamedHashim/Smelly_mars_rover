@@ -57,3 +57,6 @@
 - Create Transition type with right and left directions
 - Refactor rotateToRight function
 - Refactor rotateToLeft function
+
+## 🍅 Pomodoro 6
+- Update the Transition type
