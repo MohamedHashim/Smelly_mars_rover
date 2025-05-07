@@ -45,10 +45,8 @@ export class Rover {
   }
 
   private rotateToLeft() {
-    if (this.isEast()) { this.roverState.direction = Direction.North; }
-    else if (this.isNorth()) { this.roverState.direction = Direction.West; }
-    else if (this.isWest()) { this.roverState.direction = Direction.South; }
-    else if (this.isSouth()) { this.roverState.direction = Direction.East; }
+    let direction= this.roverState.direction as Direction;
+    this.roverState.direction =this.Transition[direction].left;
   }
 
   private isEast() {
