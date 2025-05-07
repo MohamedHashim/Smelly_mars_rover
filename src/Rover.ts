@@ -39,7 +39,8 @@ export class Rover {
     }
 
     private parsePosition(positionCommand: string[]) {
-      this.roverState.position_x = parseInt(positionCommand[0], 10);
+      const positionX = parseInt(positionCommand[0], 10);
+      this.roverState.position_x = positionX;
       this.roverState.position_y = parseInt(positionCommand[1], 10);
       this.roverState.direction = positionCommand[2][0];
     }
