@@ -4,11 +4,27 @@ import { RoverState } from "./RoverState";
 
 export class Rover {
 
-  private TransitionMap= { 
-    [Direction.North]: { left: Direction.West, right: Direction.East, step: {x_axis: 0, y_axis: 1} },
-    [Direction.East]: { left: Direction.North, right: Direction.South, step: {x_axis: 1, y_axis: 0}  },
-    [Direction.South]: { left: Direction.East, right: Direction.West, step: {x_axis: 0, y_axis: -1} },
-    [Direction.West]: { left: Direction.South, right: Direction.North, step: {x_axis: -1, y_axis: 0} }
+  private TransitionMap = {
+    [Direction.North]: {
+      left: Direction.West,
+      right: Direction.East,
+      step: { x_axis: 0, y_axis: 1 }
+    },
+    [Direction.East]: {
+      left: Direction.North,
+      right: Direction.South,
+      step: { x_axis: 1, y_axis: 0 }
+    },
+    [Direction.South]: {
+      left: Direction.East,
+      right: Direction.West,
+      step: { x_axis: 0, y_axis: -1 }
+    },
+    [Direction.West]: {
+      left: Direction.South,
+      right: Direction.North,
+      step: { x_axis: -1, y_axis: 0 }
+    }
   };
   
     constructor(initialPosition: string = "") {
