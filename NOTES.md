@@ -20,3 +20,7 @@
 - Refactor i to commandIndex
 - Refactor c to command
 - Refactor XYD to getPosition
+
+## 🍅 Pomodoro 2
+- Remove the dead code
+- Rename positoin function name to getPosition 
