@@ -16,3 +16,4 @@
 - Refactor rv to roverState
 - Refactor p to initialPosition
 - Refactor s to positionCommand
+- Refactor cms to commandInstructions
