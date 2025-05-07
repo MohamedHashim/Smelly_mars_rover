@@ -12,8 +12,8 @@ export class Rover {
     }
   
     public go(commandInstructions: string): void {
-      for (let i = 0; i < commandInstructions.length; i++) {
-        const c = commandInstructions[i];
+      for (let commandIndex = 0; commandIndex < commandInstructions.length; commandIndex++) {
+        const c = commandInstructions[commandIndex];
         if (c === "L") {
           if (this.roverState.direction === "E")      { this.roverState.direction = "N"; }
           else if (this.roverState.direction === "N") { this.roverState.direction = "W"; }

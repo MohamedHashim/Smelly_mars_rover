@@ -17,3 +17,4 @@
 - Refactor p to initialPosition
 - Refactor s to positionCommand
 - Refactor cms to commandInstructions
+- Refactor i to commandIndex

@@ -11,3 +11,4 @@ This document tracks known technical debt in the Smelly_mars_rover project. Use 
 
 - line 7: primitive obsession
 - line 8: Can we make a method to do the string parsing of the position command string 
+- line 15: Can we enhnce the for loop
