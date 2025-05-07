@@ -62,3 +62,4 @@
 - Update the Transition type to include x and y positions
 - Refactor the moveForward function
 - remove some dead code
+- Enhance readability

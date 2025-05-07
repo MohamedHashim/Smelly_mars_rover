@@ -4,7 +4,7 @@ import { RoverState } from "./RoverState";
 
 export class Rover {
 
-  private Transition= { 
+  private TransitionMap= { 
     [Direction.North]: { left: Direction.West, right: Direction.East, step: {x_axis: 0, y_axis: 1} },
     [Direction.East]: { left: Direction.North, right: Direction.South, step: {x_axis: 1, y_axis: 0}  },
     [Direction.South]: { left: Direction.East, right: Direction.West, step: {x_axis: 0, y_axis: -1} },
@@ -34,18 +34,18 @@ export class Rover {
     
   private moveForward() {
     let direction= this.roverState.direction as Direction;
-    this.roverState.position_x += this.Transition[direction].step.x_axis;
-    this.roverState.position_y += this.Transition[direction].step.y_axis;
+    this.roverState.position_x += this.TransitionMap[direction].step.x_axis;
+    this.roverState.position_y += this.TransitionMap[direction].step.y_axis;
   }
 
   private rotateToRight() {
     let direction= this.roverState.direction as Direction;
-    this.roverState.direction =this.Transition[direction].right;
+    this.roverState.direction =this.TransitionMap[direction].right;
   }
 
   private rotateToLeft() {
     let direction= this.roverState.direction as Direction;
-    this.roverState.direction =this.Transition[direction].left;
+    this.roverState.direction =this.TransitionMap[direction].left;
   }
 
   public getPosition(): string {
