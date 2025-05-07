@@ -49,3 +49,4 @@
 ## 🍅 Pomodoro 4
 - Remove the repeated conditions and code
 - Extract isEast condition to a separate function
+- Extract isNorth condition to a separate function
