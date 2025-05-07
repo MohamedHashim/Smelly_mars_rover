@@ -14,4 +14,5 @@
 - Refactor dd to direction
 - Refactor the readability of Rover
 - Refactor rv to roverState
-- refactor p to initialPosition
+- Refactor p to initialPosition
+- Refactor s to positionCommand
