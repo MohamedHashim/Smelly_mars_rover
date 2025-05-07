@@ -9,6 +9,7 @@ This document tracks known technical debt in the Smelly_mars_rover project. Use 
 - :x: Must fix as soon as possible
 - :white_check_mark: done
 
-- line 7: primitive obsession
-- line 8: Can we make a method to do the string parsing of the position command string 
-- line 15: Can we enhnce the for loop
+- ✅ line 7: primitive obsession
+- ✅ line 8: Can we make a method to do the string parsing of the position command string 
+- ✅ line 15: Can we enhnce the for loop
+- Repeated code for commands logic
