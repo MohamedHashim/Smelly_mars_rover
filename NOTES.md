@@ -52,3 +52,7 @@
 - Extract isNorth condition to a separate function
 - Extract isSouth condition to a separate function
 - Extract isWest condition to a separate function
+
+## 🍅 Pomodoro 5
+- Create Transition type with right and left directions
+
