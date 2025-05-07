@@ -23,4 +23,6 @@
 
 ## 🍅 Pomodoro 2
 - Remove the dead code
-- Rename positoin function name to getPosition 
+- Rename positoin function name to getPosition
+- Refactor command direction to enum
+- Refactor E to Direction.East

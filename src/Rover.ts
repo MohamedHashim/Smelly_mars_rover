@@ -1,5 +1,6 @@
+import Direction from "./Direction";
 import { RoverState } from "./RoverState";
-  
+
 export class Rover {
   
     constructor(initialPosition: string = "") {
@@ -15,17 +16,17 @@ export class Rover {
       for (let commandIndex = 0; commandIndex < commandInstructions.length; commandIndex++) {
         const command = commandInstructions[commandIndex];
         if (command === "L") {
-          if (this.roverState.direction === "E")      { this.roverState.direction = "N"; }
+          if (this.roverState.direction === Direction.East)      { this.roverState.direction = "N"; }
           else if (this.roverState.direction === "N") { this.roverState.direction = "W"; }
           else if (this.roverState.direction === "W") { this.roverState.direction = "S"; }
-          else if (this.roverState.direction === "S") { this.roverState.direction = "E"; }
+          else if (this.roverState.direction === "S") { this.roverState.direction = Direction.East; }
         } else if (command === "R") {
-          if (this.roverState.direction === "E")      { this.roverState.direction = "S"; }
+          if (this.roverState.direction === Direction.East)      { this.roverState.direction = "S"; }
           else if (this.roverState.direction === "S") { this.roverState.direction = "W"; }
           else if (this.roverState.direction === "W") { this.roverState.direction = "N"; }
-          else if (this.roverState.direction === "N") { this.roverState.direction = "E"; }
+          else if (this.roverState.direction === "N") { this.roverState.direction = Direction.East; }
         } else if (command === "M") {
-          if (this.roverState.direction === "E")      { this.roverState.position_x++; }
+          if (this.roverState.direction === Direction.East)      { this.roverState.position_x++; }
           if (this.roverState.direction === "S")      { this.roverState.position_y--; }
           if (this.roverState.direction === "W")      { this.roverState.position_x--; }
           if (this.roverState.direction === "N")      { this.roverState.position_y++; }
