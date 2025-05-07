@@ -33,3 +33,6 @@
 - Refactor L to Command.Left
 - Refactor R to Command.Right
 - Refactor M to Command.MoveForward
+
+## 🍅 Pomodoro 3
+- Extract parsing position to separate function

@@ -7,12 +7,10 @@ export class Rover {
     constructor(initialPosition: string = "") {
       const positionCommand = initialPosition.split(" ");
       if (positionCommand.length >= 3) {
-        this.roverState.position_x = parseInt(positionCommand[0], 10);
-        this.roverState.position_y = parseInt(positionCommand[1], 10);
-        this.roverState.direction = positionCommand[2][0];
+        this.parsePosition(positionCommand);
       }
     }
-  
+
     public go(commandInstructions: string): void {
       for (let commandIndex = 0; commandIndex < commandInstructions.length; commandIndex++) {
         const command = commandInstructions[commandIndex];
@@ -39,5 +37,11 @@ export class Rover {
       return `${this.roverState.position_x} ${this.roverState.position_y} ${this.roverState.direction}`;
     }
 
+    private parsePosition(positionCommand: string[]) {
+      this.roverState.position_x = parseInt(positionCommand[0], 10);
+      this.roverState.position_y = parseInt(positionCommand[1], 10);
+      this.roverState.direction = positionCommand[2][0];
+    }
+    
     private roverState: RoverState = new RoverState();
   }
