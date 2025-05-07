@@ -59,4 +59,5 @@
 - Refactor rotateToLeft function
 
 ## 🍅 Pomodoro 6
-- Update the Transition type
+- Update the Transition type to include x and y positions
+- Refactor the moveForward function
