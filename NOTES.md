@@ -8,6 +8,4 @@
 - ❒ : TODO
 
 ## 🍅 Pomodoro 1
-
-🚧 ...
-❒ ...
+- Refactor the readability of RoverState
