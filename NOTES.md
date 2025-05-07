@@ -27,3 +27,4 @@
 - Refactor command direction to enum
 - Refactor E to Direction.East
 - Refactor W to Direction.West
+- Refactor N to Direction.North

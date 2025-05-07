@@ -16,20 +16,20 @@ export class Rover {
       for (let commandIndex = 0; commandIndex < commandInstructions.length; commandIndex++) {
         const command = commandInstructions[commandIndex];
         if (command === "L") {
-          if (this.roverState.direction === Direction.East)      { this.roverState.direction = "N"; }
-          else if (this.roverState.direction === "N") { this.roverState.direction = Direction.West; }
+          if (this.roverState.direction === Direction.East)      { this.roverState.direction = Direction.North; }
+          else if (this.roverState.direction === Direction.North) { this.roverState.direction = Direction.West; }
           else if (this.roverState.direction === Direction.West) { this.roverState.direction = "S"; }
           else if (this.roverState.direction === "S") { this.roverState.direction = Direction.East; }
         } else if (command === "R") {
           if (this.roverState.direction === Direction.East)      { this.roverState.direction = "S"; }
           else if (this.roverState.direction === "S") { this.roverState.direction = Direction.West; }
-          else if (this.roverState.direction === Direction.West) { this.roverState.direction = "N"; }
-          else if (this.roverState.direction === "N") { this.roverState.direction = Direction.East; }
+          else if (this.roverState.direction === Direction.West) { this.roverState.direction = Direction.North; }
+          else if (this.roverState.direction === Direction.North) { this.roverState.direction = Direction.East; }
         } else if (command === "M") {
           if (this.roverState.direction === Direction.East)      { this.roverState.position_x++; }
           if (this.roverState.direction === "S")      { this.roverState.position_y--; }
           if (this.roverState.direction === Direction.West)      { this.roverState.position_x--; }
-          if (this.roverState.direction === "N")      { this.roverState.position_y++; }
+          if (this.roverState.direction === Direction.North)      { this.roverState.position_y++; }
         }
       }
     }
