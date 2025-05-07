@@ -41,3 +41,4 @@
 - Enahnce readbility of parsing position y
 - Enahnce readbility of parsing direction
 - Extract rotate left logic to a separate function
+- Extract rotate right logic to a separate function

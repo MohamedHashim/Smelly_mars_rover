@@ -18,10 +18,7 @@ export class Rover {
         if (command === Command.Left) {
           this.rotateToLeft();
         } else if (command === Command.Right) {
-          if (this.roverState.direction === Direction.East)      { this.roverState.direction = Direction.South; }
-          else if (this.roverState.direction === Direction.South) { this.roverState.direction = Direction.West; }
-          else if (this.roverState.direction === Direction.West) { this.roverState.direction = Direction.North; }
-          else if (this.roverState.direction === Direction.North) { this.roverState.direction = Direction.East; }
+          this.rotateToRight();
         } else if (command === Command.MoveForward) {
           if (this.roverState.direction === Direction.East)      { this.roverState.position_x++; }
           if (this.roverState.direction === Direction.South)      { this.roverState.position_y--; }
@@ -31,6 +28,13 @@ export class Rover {
       }
     }
     
+  private rotateToRight() {
+    if (this.roverState.direction === Direction.East) { this.roverState.direction = Direction.South; }
+    else if (this.roverState.direction === Direction.South) { this.roverState.direction = Direction.West; }
+    else if (this.roverState.direction === Direction.West) { this.roverState.direction = Direction.North; }
+    else if (this.roverState.direction === Direction.North) { this.roverState.direction = Direction.East; }
+  }
+
   private rotateToLeft() {
     if (this.roverState.direction === Direction.East) { this.roverState.direction = Direction.North; }
     else if (this.roverState.direction === Direction.North) { this.roverState.direction = Direction.West; }
