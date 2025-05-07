@@ -9,4 +9,4 @@ This document tracks known technical debt in the Smelly_mars_rover project. Use 
 - :x: Must fix as soon as possible
 - :white_check_mark: done
 
-- Can we make a method to do the string parsing of the position command string
+- line 8: Can we make a method to do the string parsing of the position command string 
