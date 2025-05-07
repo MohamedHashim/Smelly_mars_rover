@@ -1,3 +1,4 @@
+import { Command } from "./Command";
 import Direction from "./Direction";
 import { RoverState } from "./RoverState";
 
@@ -15,7 +16,7 @@ export class Rover {
     public go(commandInstructions: string): void {
       for (let commandIndex = 0; commandIndex < commandInstructions.length; commandIndex++) {
         const command = commandInstructions[commandIndex];
-        if (command === "L") {
+        if (command === Command.Left) {
           if (this.roverState.direction === Direction.East)      { this.roverState.direction = Direction.North; }
           else if (this.roverState.direction === Direction.North) { this.roverState.direction = Direction.West; }
           else if (this.roverState.direction === Direction.West) { this.roverState.direction = Direction.South; }
