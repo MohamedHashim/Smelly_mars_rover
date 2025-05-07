@@ -20,14 +20,18 @@ export class Rover {
         } else if (command === Command.Right) {
           this.rotateToRight();
         } else if (command === Command.MoveForward) {
-          if (this.roverState.direction === Direction.East)      { this.roverState.position_x++; }
-          if (this.roverState.direction === Direction.South)      { this.roverState.position_y--; }
-          if (this.roverState.direction === Direction.West)      { this.roverState.position_x--; }
-          if (this.roverState.direction === Direction.North)      { this.roverState.position_y++; }
+          this.moveForward();
         }
       }
     }
     
+  private moveForward() {
+    if (this.roverState.direction === Direction.East) { this.roverState.position_x++; }
+    if (this.roverState.direction === Direction.South) { this.roverState.position_y--; }
+    if (this.roverState.direction === Direction.West) { this.roverState.position_x--; }
+    if (this.roverState.direction === Direction.North) { this.roverState.position_y++; }
+  }
+
   private rotateToRight() {
     if (this.roverState.direction === Direction.East) { this.roverState.direction = Direction.South; }
     else if (this.roverState.direction === Direction.South) { this.roverState.direction = Direction.West; }
