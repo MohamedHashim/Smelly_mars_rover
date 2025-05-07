@@ -13,8 +13,7 @@ export class Rover {
     }
 
     public go(commandInstructions: string): void {
-      for (let commandIndex = 0; commandIndex < commandInstructions.length; commandIndex++) {
-        const command = commandInstructions[commandIndex];
+      for (const command of commandInstructions) {
         if (command === Command.Left) {
           this.rotateToLeft();
         } else if (command === Command.Right) {

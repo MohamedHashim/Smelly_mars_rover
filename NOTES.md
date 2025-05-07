@@ -43,3 +43,4 @@
 - Extract rotate left logic to a separate function
 - Extract rotate right logic to a separate function
 - Extract move forward logic to a separate function
+- Enhance the commandInstructions loop readability 
