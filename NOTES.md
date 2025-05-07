@@ -28,3 +28,4 @@
 - Refactor E to Direction.East
 - Refactor W to Direction.West
 - Refactor N to Direction.North
+- Refactor S to Direction.South
