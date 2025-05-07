@@ -29,3 +29,4 @@
 - Refactor W to Direction.West
 - Refactor N to Direction.North
 - Refactor S to Direction.South
+- Refactor command actions to enum
