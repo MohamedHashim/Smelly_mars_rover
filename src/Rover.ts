@@ -2,8 +2,8 @@ import { RoverState } from "./RoverState";
   
 export class Rover {
   
-    constructor(p: string = "") {
-      const s = p.split(" ");
+    constructor(initialPosition: string = "") {
+      const s = initialPosition.split(" ");
       if (s.length >= 3) {
         this.roverState.position_x = parseInt(s[0], 10);
         this.roverState.position_y = parseInt(s[1], 10);
