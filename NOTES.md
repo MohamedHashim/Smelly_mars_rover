@@ -36,3 +36,4 @@
 
 ## 🍅 Pomodoro 3
 - Extract parsing position to separate function
+- Remove magic numbers: remove 3 to a const number

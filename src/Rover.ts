@@ -6,7 +6,8 @@ export class Rover {
   
     constructor(initialPosition: string = "") {
       const positionCommand = initialPosition.split(" ");
-      if (positionCommand.length >= 3) {
+      const directionParamsNumber = 3
+      if (positionCommand.length >= directionParamsNumber) {
         this.parsePosition(positionCommand);
       }
     }
@@ -42,6 +43,6 @@ export class Rover {
       this.roverState.position_y = parseInt(positionCommand[1], 10);
       this.roverState.direction = positionCommand[2][0];
     }
-    
+
     private roverState: RoverState = new RoverState();
   }
