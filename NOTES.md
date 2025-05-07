@@ -9,3 +9,6 @@
 
 ## 🍅 Pomodoro 1
 - Refactor the readability of RoverState
+- Refactor xx to position_x
+- Refactor yy to position_y
+- Refactor dd to direction
