@@ -3,6 +3,13 @@ import { Direction } from "./Direction";
 import { RoverState } from "./RoverState";
 
 export class Rover {
+
+  private Transition= { 
+    [Direction.North]: { left: Direction.West, right: Direction.East },
+    [Direction.East]: { left: Direction.North, right: Direction.South },
+    [Direction.South]: { left: Direction.East, right: Direction.West },
+    [Direction.West]: { left: Direction.South, right: Direction.North }
+  };
   
     constructor(initialPosition: string = "") {
       const positionCommand = initialPosition.split(" ");
@@ -33,10 +40,8 @@ export class Rover {
   }
 
   private rotateToRight() {
-    if (this.isEast()) { this.roverState.direction = Direction.South; }
-    else if (this.isSouth()) { this.roverState.direction = Direction.West; }
-    else if (this.isWest()) { this.roverState.direction = Direction.North; }
-    else if (this.isNorth()) { this.roverState.direction = Direction.East; }
+    let direction= this.mapToDirection(this.roverState.direction)
+    this.roverState.direction =this.Transition[direction].right;
   }
 
   private rotateToLeft() {
@@ -75,6 +80,17 @@ export class Rover {
       this.roverState.position_y = positionY;
       this.roverState.direction = direction;
     }
+
+
+  private mapToDirection(direction: string): Direction {
+    switch (direction) {
+      case "N": return Direction.North;
+      case "E": return Direction.East;
+      case "S": return Direction.South;
+      case "W": return Direction.West;
+      default: throw new Error("Invalid direction");
+    }
+  }
 
     private roverState: RoverState = new RoverState();
   }
