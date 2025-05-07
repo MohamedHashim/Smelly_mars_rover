@@ -41,10 +41,11 @@ export class Rover {
     private parsePosition(positionCommand: string[]) {
       const positionX = parseInt(positionCommand[0], 10);
       const positionY = parseInt(positionCommand[1], 10);
-      
+      const direction = positionCommand[2][0];
+
       this.roverState.position_x = positionX;
       this.roverState.position_y = positionY;
-      this.roverState.direction = positionCommand[2][0];
+      this.roverState.direction = direction;
     }
 
     private roverState: RoverState = new RoverState();
