@@ -13,3 +13,4 @@
 - Refactor yy to position_y
 - Refactor dd to direction
 - Refactor the readability of Rover
+- Refactor rv to roverState
