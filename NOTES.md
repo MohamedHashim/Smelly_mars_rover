@@ -38,3 +38,4 @@
 - Extract parsing position to separate function
 - Remove magic numbers: remove 3 to a const number
 - Enahnce readbility of parsing position x
+- Enahnce readbility of parsing position y
