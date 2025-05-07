@@ -37,12 +37,12 @@ export class Rover {
       this.go(z[0]);
     }
   
-    public get XYD(): string {
+    public get getPosition(): string {
       return `${this.roverState.position_x} ${this.roverState.position_y} ${this.roverState.direction}`;
     }
 
     public pos(): string {
-      return this.XYD;
+      return this.getPosition;
     }
 
     private roverState: RoverState = new RoverState();

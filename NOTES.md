@@ -19,3 +19,4 @@
 - Refactor cms to commandInstructions
 - Refactor i to commandIndex
 - Refactor c to command
+- Refactor XYD to getPosition
