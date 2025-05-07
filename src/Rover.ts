@@ -21,7 +21,7 @@ export class Rover {
           else if (this.roverState.direction === Direction.North) { this.roverState.direction = Direction.West; }
           else if (this.roverState.direction === Direction.West) { this.roverState.direction = Direction.South; }
           else if (this.roverState.direction === Direction.South) { this.roverState.direction = Direction.East; }
-        } else if (command === "R") {
+        } else if (command === Command.Right) {
           if (this.roverState.direction === Direction.East)      { this.roverState.direction = Direction.South; }
           else if (this.roverState.direction === Direction.South) { this.roverState.direction = Direction.West; }
           else if (this.roverState.direction === Direction.West) { this.roverState.direction = Direction.North; }

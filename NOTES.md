@@ -31,3 +31,4 @@
 - Refactor S to Direction.South
 - Refactor command actions to enum
 - Refactor L to Command.Left
+- Refactor R to Command.Right
