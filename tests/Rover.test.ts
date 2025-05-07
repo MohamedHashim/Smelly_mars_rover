@@ -21,7 +21,7 @@ describe("MarsRoverShould", () => {
       "start at '%s', with instructions '%s' => '%s'",
       (startingPosition, instructions, expectedOutput) => {
         const rover = new Rover(startingPosition);
-        rover.go(instructions);        
+        rover.executeCommands(instructions);        
         expect(rover.getPosition()).toBe(expectedOutput);
       }
     );

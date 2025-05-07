@@ -35,7 +35,7 @@ export class Rover {
       }
     }
 
-    public go(commandInstructions: string): void {
+    public executeCommands(commandInstructions: string): void {
       for (const command of commandInstructions) {
         switch (command) {
           case Command.Left: 
