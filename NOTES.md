@@ -40,3 +40,4 @@
 - Enahnce readbility of parsing position x
 - Enahnce readbility of parsing position y
 - Enahnce readbility of parsing direction
+- Extract rotate left logic to a separate function
