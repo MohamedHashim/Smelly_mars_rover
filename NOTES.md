@@ -51,3 +51,4 @@
 - Extract isEast condition to a separate function
 - Extract isNorth condition to a separate function
 - Extract isSouth condition to a separate function
+- Extract isWest condition to a separate function
