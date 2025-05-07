@@ -6,7 +6,7 @@ export class Rover {
       const s = p.split(" ");
       if (s.length >= 3) {
         this.rs.position_x = parseInt(s[0], 10);
-        this.rs.yy = parseInt(s[1], 10);
+        this.rs.position_y = parseInt(s[1], 10);
         this.rs.dd = s[2][0];
       }
     }
@@ -26,9 +26,9 @@ export class Rover {
           else if (this.rs.dd === "N") { this.rs.dd = "E"; }
         } else if (c === "M") {
           if (this.rs.dd === "E")      { this.rs.position_x++; }
-          if (this.rs.dd === "S")      { this.rs.yy--; }
+          if (this.rs.dd === "S")      { this.rs.position_y--; }
           if (this.rs.dd === "W")      { this.rs.position_x--; }
-          if (this.rs.dd === "N")      { this.rs.yy++; }
+          if (this.rs.dd === "N")      { this.rs.position_y++; }
         }
       }
     }
@@ -38,7 +38,7 @@ export class Rover {
     }
   
     public get XYD(): string {
-      return `${this.rs.position_x} ${this.rs.yy} ${this.rs.dd}`;
+      return `${this.rs.position_x} ${this.rs.position_y} ${this.rs.dd}`;
     }
 
     public pos(): string {
