@@ -17,18 +17,18 @@ export class Rover {
         const command = commandInstructions[commandIndex];
         if (command === "L") {
           if (this.roverState.direction === Direction.East)      { this.roverState.direction = "N"; }
-          else if (this.roverState.direction === "N") { this.roverState.direction = "W"; }
-          else if (this.roverState.direction === "W") { this.roverState.direction = "S"; }
+          else if (this.roverState.direction === "N") { this.roverState.direction = Direction.West; }
+          else if (this.roverState.direction === Direction.West) { this.roverState.direction = "S"; }
           else if (this.roverState.direction === "S") { this.roverState.direction = Direction.East; }
         } else if (command === "R") {
           if (this.roverState.direction === Direction.East)      { this.roverState.direction = "S"; }
-          else if (this.roverState.direction === "S") { this.roverState.direction = "W"; }
-          else if (this.roverState.direction === "W") { this.roverState.direction = "N"; }
+          else if (this.roverState.direction === "S") { this.roverState.direction = Direction.West; }
+          else if (this.roverState.direction === Direction.West) { this.roverState.direction = "N"; }
           else if (this.roverState.direction === "N") { this.roverState.direction = Direction.East; }
         } else if (command === "M") {
           if (this.roverState.direction === Direction.East)      { this.roverState.position_x++; }
           if (this.roverState.direction === "S")      { this.roverState.position_y--; }
-          if (this.roverState.direction === "W")      { this.roverState.position_x--; }
+          if (this.roverState.direction === Direction.West)      { this.roverState.position_x--; }
           if (this.roverState.direction === "N")      { this.roverState.position_y++; }
         }
       }
