@@ -47,4 +47,5 @@
 - Replace if conditions of commands with switch case
 
 ## 🍅 Pomodoro 4
-- Reomving the repeated conditions and code
+- Remove the repeated conditions and code
+- Extract isEast condition to a separate function
