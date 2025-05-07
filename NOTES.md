@@ -45,3 +45,6 @@
 - Extract move forward logic to a separate function
 - Enhance the commandInstructions loop readability
 - Replace if conditions of commands with switch case
+
+## 🍅 Pomodoro 4
+- 

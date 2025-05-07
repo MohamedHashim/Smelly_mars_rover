@@ -15,9 +15,12 @@ export class Rover {
     public go(commandInstructions: string): void {
       for (const command of commandInstructions) {
         switch (command) {
-          case Command.Left: this.rotateToLeft(); break;
-          case Command.Right: this.rotateToRight(); break;
-          case Command.MoveForward: this.moveForward(); break;
+          case Command.Left: 
+            this.rotateToLeft(); break;
+          case Command.Right:
+             this.rotateToRight(); break;
+          case Command.MoveForward: 
+            this.moveForward(); break;
         }
       }
     }
