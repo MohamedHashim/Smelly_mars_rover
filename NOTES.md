@@ -18,3 +18,4 @@
 - Refactor s to positionCommand
 - Refactor cms to commandInstructions
 - Refactor i to commandIndex
+- Refactor c to command

@@ -13,18 +13,18 @@ export class Rover {
   
     public go(commandInstructions: string): void {
       for (let commandIndex = 0; commandIndex < commandInstructions.length; commandIndex++) {
-        const c = commandInstructions[commandIndex];
-        if (c === "L") {
+        const command = commandInstructions[commandIndex];
+        if (command === "L") {
           if (this.roverState.direction === "E")      { this.roverState.direction = "N"; }
           else if (this.roverState.direction === "N") { this.roverState.direction = "W"; }
           else if (this.roverState.direction === "W") { this.roverState.direction = "S"; }
           else if (this.roverState.direction === "S") { this.roverState.direction = "E"; }
-        } else if (c === "R") {
+        } else if (command === "R") {
           if (this.roverState.direction === "E")      { this.roverState.direction = "S"; }
           else if (this.roverState.direction === "S") { this.roverState.direction = "W"; }
           else if (this.roverState.direction === "W") { this.roverState.direction = "N"; }
           else if (this.roverState.direction === "N") { this.roverState.direction = "E"; }
-        } else if (c === "M") {
+        } else if (command === "M") {
           if (this.roverState.direction === "E")      { this.roverState.position_x++; }
           if (this.roverState.direction === "S")      { this.roverState.position_y--; }
           if (this.roverState.direction === "W")      { this.roverState.position_x--; }
