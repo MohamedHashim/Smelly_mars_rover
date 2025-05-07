@@ -1,5 +1,5 @@
 import { Command } from "./Command";
-import Direction from "./Direction";
+import { Direction } from "./Direction";
 import { RoverState } from "./RoverState";
 
 export class Rover {
