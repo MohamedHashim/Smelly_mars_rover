@@ -7,7 +7,7 @@ export class Rover {
       if (s.length >= 3) {
         this.rs.position_x = parseInt(s[0], 10);
         this.rs.position_y = parseInt(s[1], 10);
-        this.rs.dd = s[2][0];
+        this.rs.direction = s[2][0];
       }
     }
   
@@ -15,20 +15,20 @@ export class Rover {
       for (let i = 0; i < cms.length; i++) {
         const c = cms[i];
         if (c === "L") {
-          if (this.rs.dd === "E")      { this.rs.dd = "N"; }
-          else if (this.rs.dd === "N") { this.rs.dd = "W"; }
-          else if (this.rs.dd === "W") { this.rs.dd = "S"; }
-          else if (this.rs.dd === "S") { this.rs.dd = "E"; }
+          if (this.rs.direction === "E")      { this.rs.direction = "N"; }
+          else if (this.rs.direction === "N") { this.rs.direction = "W"; }
+          else if (this.rs.direction === "W") { this.rs.direction = "S"; }
+          else if (this.rs.direction === "S") { this.rs.direction = "E"; }
         } else if (c === "R") {
-          if (this.rs.dd === "E")      { this.rs.dd = "S"; }
-          else if (this.rs.dd === "S") { this.rs.dd = "W"; }
-          else if (this.rs.dd === "W") { this.rs.dd = "N"; }
-          else if (this.rs.dd === "N") { this.rs.dd = "E"; }
+          if (this.rs.direction === "E")      { this.rs.direction = "S"; }
+          else if (this.rs.direction === "S") { this.rs.direction = "W"; }
+          else if (this.rs.direction === "W") { this.rs.direction = "N"; }
+          else if (this.rs.direction === "N") { this.rs.direction = "E"; }
         } else if (c === "M") {
-          if (this.rs.dd === "E")      { this.rs.position_x++; }
-          if (this.rs.dd === "S")      { this.rs.position_y--; }
-          if (this.rs.dd === "W")      { this.rs.position_x--; }
-          if (this.rs.dd === "N")      { this.rs.position_y++; }
+          if (this.rs.direction === "E")      { this.rs.position_x++; }
+          if (this.rs.direction === "S")      { this.rs.position_y--; }
+          if (this.rs.direction === "W")      { this.rs.position_x--; }
+          if (this.rs.direction === "N")      { this.rs.position_y++; }
         }
       }
     }
@@ -38,7 +38,7 @@ export class Rover {
     }
   
     public get XYD(): string {
-      return `${this.rs.position_x} ${this.rs.position_y} ${this.rs.dd}`;
+      return `${this.rs.position_x} ${this.rs.position_y} ${this.rs.direction}`;
     }
 
     public pos(): string {
