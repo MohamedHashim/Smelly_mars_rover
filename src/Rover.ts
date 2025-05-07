@@ -40,7 +40,7 @@ export class Rover {
   }
 
   private rotateToRight() {
-    let direction= this.mapToDirection(this.roverState.direction)
+    let direction= this.roverState.direction as Direction;
     this.roverState.direction =this.Transition[direction].right;
   }
 
@@ -80,17 +80,6 @@ export class Rover {
       this.roverState.position_y = positionY;
       this.roverState.direction = direction;
     }
-
-
-  private mapToDirection(direction: string): Direction {
-    switch (direction) {
-      case "N": return Direction.North;
-      case "E": return Direction.East;
-      case "S": return Direction.South;
-      case "W": return Direction.West;
-      default: throw new Error("Invalid direction");
-    }
-  }
 
     private roverState: RoverState = new RoverState();
   }
